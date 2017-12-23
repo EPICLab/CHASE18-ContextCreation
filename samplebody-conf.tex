@@ -1,384 +1,498 @@
 \section{Introduction}
 
-The \textit{proceedings} are the records of a conference.\footnote{This
-  is a footnote}  ACM seeks
-to give these conference by-products a uniform, high-quality
-appearance.  To do this, ACM has some rigid requirements for the
-format of the proceedings documents: there is a specified format
-(balanced double columns), a specified set of fonts (Arial or
-Helvetica and Times Roman) in certain specified sizes, a specified
-live area, centered on the page, specified size of margins, specified
-column width and gutter size.
+% The \textit{proceedings} are the records of a conference.\footnote{This
+%   is a footnote}  ACM seeks
+% to give these conference by-products a uniform, high-quality
+% appearance.  To do this, ACM has some rigid requirements for the
+% format of the proceedings documents: there is a specified format
+% (balanced double columns), a specified set of fonts (Arial or
+% Helvetica and Times Roman) in certain specified sizes, a specified
+% live area, centered on the page, specified size of margins, specified
+% column width and gutter size.
 
-\section{The Body of The Paper}
-Typically, the body of a paper is organized into a hierarchical
-structure, with numbered or unnumbered headings for sections,
-subsections, sub-subsections, and even smaller sections.  The command
-\texttt{{\char'134}section} that precedes this paragraph is part of
-such a hierarchy.\footnote{This is a footnote.} \LaTeX\ handles the
-numbering and placement of these headings for you, when you use the
-appropriate heading commands around the titles of the headings.  If
-you want a sub-subsection or smaller part to be unnumbered in your
-output, simply append an asterisk to the command name.  Examples of
-both numbered and unnumbered headings will appear throughout the
-balance of this sample document.
-
-Because the entire article is contained in the \textbf{document}
-environment, you can indicate the start of a new paragraph with a
-blank line in your input file; that is why this sentence forms a
-separate paragraph.
-
-\subsection{Type Changes and {\itshape Special} Characters}
-
-We have already seen several typeface changes in this sample.  You can
-indicate italicized words or phrases in your text with the command
-\texttt{{\char'134}textit}; emboldening with the command
-\texttt{{\char'134}textbf} and typewriter-style (for instance, for
-computer code) with \texttt{{\char'134}texttt}.  But remember, you do
-not have to indicate typestyle changes when such changes are part of
-the \textit{structural} elements of your article; for instance, the
-heading of this subsection will be in a sans serif\footnote{Another
-  footnote here.  Let's make this a rather long one to see how it
-  looks.} typeface, but that is handled by the document class file.
-Take care with the use of\footnote{Another footnote.}  the
-curly braces in typeface changes; they mark the beginning and end of
-the text that is to be in the different typeface.
-
-You can use whatever symbols, accented characters, or non-English
-characters you need anywhere in your document; you can find a complete
-list of what is available in the \textit{\LaTeX\ User's Guide}
-\cite{Lamport:LaTeX}.
-
-\subsection{Math Equations}
-You may want to display math equations in three distinct styles:
-inline, numbered or non-numbered display.  Each of
-the three are discussed in the next sections.
-
-\subsubsection{Inline (In-text) Equations}
-A formula that appears in the running text is called an
-inline or in-text formula.  It is produced by the
-\textbf{math} environment, which can be
-invoked with the usual \texttt{{\char'134}begin\,\ldots{\char'134}end}
-construction or with the short form \texttt{\$\,\ldots\$}. You
-can use any of the symbols and structures,
-from $\alpha$ to $\omega$, available in
-\LaTeX~\cite{Lamport:LaTeX}; this section will simply show a
-few examples of in-text equations in context. Notice how
-this equation:
-\begin{math}
-  \lim_{n\rightarrow \infty}x=0
-\end{math},
-set here in in-line math style, looks slightly different when
-set in display style.  (See next section).
-
-\subsubsection{Display Equations}
-A numbered display equation---one set off by vertical space from the
-text and centered horizontally---is produced by the \textbf{equation}
-environment. An unnumbered display equation is produced by the
-\textbf{displaymath} environment.
-
-Again, in either environment, you can use any of the symbols
-and structures available in \LaTeX\@; this section will just
-give a couple of examples of display equations in context.
-First, consider the equation, shown as an inline equation above:
-\begin{equation}
-  \lim_{n\rightarrow \infty}x=0
-\end{equation}
-Notice how it is formatted somewhat differently in
-the \textbf{displaymath}
-environment.  Now, we'll enter an unnumbered equation:
-\begin{displaymath}
-  \sum_{i=0}^{\infty} x + 1
-\end{displaymath}
-and follow it with another numbered equation:
-\begin{equation}
-  \sum_{i=0}^{\infty}x_i=\int_{0}^{\pi+2} f
-\end{equation}
-just to demonstrate \LaTeX's able handling of numbering.
-
-\subsection{Citations}
-Citations to articles~\cite{bowman:reasoning,
-clark:pct, braams:babel, herlihy:methodology},
-conference proceedings~\cite{clark:pct} or maybe
-books \cite{Lamport:LaTeX, salas:calculus} listed
-in the Bibliography section of your
-article will occur throughout the text of your article.
-You should use BibTeX to automatically produce this bibliography;
-you simply need to insert one of several citation commands with
-a key of the item cited in the proper location in
-the \texttt{.tex} file~\cite{Lamport:LaTeX}.
-The key is a short reference you invent to uniquely
-identify each work; in this sample document, the key is
-the first author's surname and a
-word from the title.  This identifying key is included
-with each item in the \texttt{.bib} file for your article.
-
-The details of the construction of the \texttt{.bib} file
-are beyond the scope of this sample document, but more
-information can be found in the \textit{Author's Guide},
-and exhaustive details in the \textit{\LaTeX\ User's
-Guide} by Lamport~\shortcite{Lamport:LaTeX}.
-
-This article shows only the plainest form
-of the citation command, using \texttt{{\char'134}cite}.
-
-Some examples.  A paginated journal article \cite{Abril07}, an enumerated
-journal article \cite{Cohen07}, a reference to an entire issue \cite{JCohen96},
-a monograph (whole book) \cite{Kosiur01}, a monograph/whole book in a series (see 2a in spec. document)
-\cite{Harel79}, a divisible-book such as an anthology or compilation \cite{Editor00}
-followed by the same example, however we only output the series if the volume number is given
-\cite{Editor00a} (so Editor00a's series should NOT be present since it has no vol. no.),
-a chapter in a divisible book \cite{Spector90}, a chapter in a divisible book
-in a series \cite{Douglass98}, a multi-volume work as book \cite{Knuth97},
-an article in a proceedings (of a conference, symposium, workshop for example)
-(paginated proceedings article) \cite{Andler79}, a proceedings article
-with all possible elements \cite{Smith10}, an example of an enumerated
-proceedings article \cite{VanGundy07},
-an informally published work \cite{Harel78}, a doctoral dissertation \cite{Clarkson85},
-a master's thesis: \cite{anisi03}, an online document / world wide web
-resource \cite{Thornburg01, Ablamowicz07, Poker06}, a video game (Case 1) \cite{Obama08} and (Case 2) \cite{Novak03}
-and \cite{Lee05} and (Case 3) a patent \cite{JoeScientist001},
-work accepted for publication \cite{rous08}, 'YYYYb'-test for prolific author
-\cite{SaeediMEJ10} and \cite{SaeediJETC10}. Other cites might contain
-'duplicate' DOI and URLs (some SIAM articles) \cite{Kirschmer:2010:AEI:1958016.1958018}.
-Boris / Barbara Beeton: multi-volume works as books
-\cite{MR781536} and \cite{MR781537}.
-
-A couple of citations with DOIs: \cite{2004:ITE:1009386.1010128,
-  Kirschmer:2010:AEI:1958016.1958018}. 
-
-Online citations: \cite{TUGInstmem, Thornburg01, CTANacmart}.  
+\begin{itemize}
+\item[$\square$] A list of contribution
+\item[$\square$] RQs
+\item[$\square$] Settings of the study
+\item[$\square$] What is the problem?
+\item[$\square$] Why do you care?
+\item[$\square$] Why did others fail?
+\item[$\square$] What are you doing?
+\item[$\square$] What did you find?
+\item[$\square$] So what?
+% \item[$\boxtimes$] A closed item.
+\end{itemize}
 
 
-\subsection{Tables}
-Because tables cannot be split across pages, the best
-placement for them is typically the top of the page
-nearest their initial cite.  To
-ensure this proper ``floating'' placement of tables, use the
-environment \textbf{table} to enclose the table's contents and
-the table caption.  The contents of the table itself must go
-in the \textbf{tabular} environment, to
-be aligned properly in rows and columns, with the desired
-horizontal and vertical rules.  Again, detailed instructions
-on \textbf{tabular} material
-are found in the \textit{\LaTeX\ User's Guide}.
+Every activity of a developer is based on a programming problem, and each solution that developers come up with are a result of not only gaining information, but also morphing that information in a way that applies to the problem and dictates what actions the programmer should take next. We as researchers have focused on programmers' behaviors and activities to deduce how they reach information and to recommend more useful information. One key aspect of processing information to reach a solution has been long ignored: context. 
+ 
+The general notion of context is that of a background story --- who works on what file, when has what changed in a file and so on. But context is not only the additional information, it is something that adds sense to the key pieces information, making it applicable to the problem and shapes the solution. It is an important piece of the puzzle, as the same information can change it's meaning based on the context e.g. strawberry 'jam' and traffic 'jam'. 
 
-Immediately following this sentence is the point at which
-Table~\ref{tab:freq} is included in the input file; compare the
-placement of the table here with the table in the printed
-output of this document.
+Albeit it is hard to observe, we can make abstractions about how context is formed by observing developers at work. We can then confirm our abstractions by interviewing the developers and asking them to clarify their thought process.
 
-\begin{table}
-  \caption{Frequency of Special Characters}
-  \label{tab:freq}
-  \begin{tabular}{ccl}
-    \toprule
-    Non-English or Math&Frequency&Comments\\
-    \midrule
-    \O & 1 in 1,000& For Swedish names\\
-    $\pi$ & 1 in 5& Common in math\\
-    \$ & 4 in 5 & Used in business\\
-    $\Psi^2_1$ & 1 in 40,000& Unexplained usage\\
-  \bottomrule
-\end{tabular}
-\end{table}
+The contributions of this paper are:
+\begin{itemize}
 
-To set a wider table, which takes up the whole width of the page's
-live area, use the environment \textbf{table*} to enclose the table's
-contents and the table caption.  As with a single-column table, this
-wide table will ``float'' to a location deemed more desirable.
-Immediately following this sentence is the point at which
-Table~\ref{tab:commands} is included in the input file; again, it is
-instructive to compare the placement of the table here with the table
-in the printed output of this document.
+\item We attempt to understand what artifacts and information are within the context leading to a solution. There is a pattern in which the users gain and interact with the artifacts based on the problem they are trying to solve. This gives us insights into what information from an artifact is contextualized in certain cases.
 
+\item We attempt to understand how each information contributes to the  ideation of the solution to discover factors (other than word similarity) that affect the value associated with information. This gives us insight into how to meaning and applicability to a problem add or reduce value of information.
+% Mapping goes to the next paper. For now forget about mapping.
 
-\begin{table*}
-  \caption{Some Typical Commands}
-  \label{tab:commands}
-  \begin{tabular}{ccl}
-    \toprule
-    Command &A Number & Comments\\
-    \midrule
-    \texttt{{\char'134}author} & 100& Author \\
-    \texttt{{\char'134}table}& 300 & For tables\\
-    \texttt{{\char'134}table*}& 400& For wider tables\\
-    \bottomrule
-  \end{tabular}
-\end{table*}
-% end the environment with {table*}, NOTE not {table}!
+\item We categorize the interactions as situated or planned and observe how this distinction affects the further interactions. Planned actions are often interrupted by situated ones, causing developers to pursue tasks other than they planned. In some cases this causes interruption whereas in others it aids the planned action by providing more contextualized information. 
 
-It is strongly recommended to use the package booktabs~\cite{Fear05}
-and follow its main principles of typography with respect to tables:
-\begin{enumerate}
-\item Never, ever use vertical rules.
-\item Never use double rules.
-\end{enumerate}
-It is also a good idea not to overuse horizontal rules.
+One take-away point of the paper is what constitutes a context that guides the developer's design and implementation of a solution.
 
-
-\subsection{Figures}
-
-Like tables, figures cannot be split across pages; the best placement
-for them is typically the top or the bottom of the page nearest their
-initial cite.  To ensure this proper ``floating'' placement of
-figures, use the environment \textbf{figure} to enclose the figure and
-its caption.
-
-This sample document contains examples of \texttt{.eps} files to be
-displayable with \LaTeX.  If you work with pdf\LaTeX, use files in the
-\texttt{.pdf} format.  Note that most modern \TeX\ systems will convert
-\texttt{.eps} to \texttt{.pdf} for you on the fly.  More details on
-each of these are found in the \textit{Author's Guide}.
-
-\begin{figure}
-\includegraphics{fly}
-\caption{A sample black and white graphic.}
-\end{figure}
-
-\begin{figure}
-\includegraphics[height=1in, width=1in]{fly}
-\caption{A sample black and white graphic
-that has been resized with the \texttt{includegraphics} command.}
-\end{figure}
-
-
-As was the case with tables, you may want a figure that spans two
-columns.  To do this, and still to ensure proper ``floating''
-placement of tables, use the environment \textbf{figure*} to enclose
-the figure and its caption.  And don't forget to end the environment
-with \textbf{figure*}, not \textbf{figure}!
-
-\begin{figure*}
-\includegraphics{flies}
-\caption{A sample black and white graphic
-that needs to span two columns of text.}
-\end{figure*}
-
-
-\begin{figure}
-\includegraphics[height=1in, width=1in]{rosette}
-\caption{A sample black and white graphic that has
-been resized with the \texttt{includegraphics} command.}
-\end{figure}
-
-\subsection{Theorem-like Constructs}
-
-Other common constructs that may occur in your article are the forms
-for logical constructs like theorems, axioms, corollaries and proofs.
-ACM uses two types of these constructs:  theorem-like and
-definition-like.
-
-Here is a theorem:
-\begin{theorem}
-  Let $f$ be continuous on $[a,b]$.  If $G$ is
-  an antiderivative for $f$ on $[a,b]$, then
-  \begin{displaymath}
-    \int^b_af(t)\,dt = G(b) - G(a).
-  \end{displaymath}
-\end{theorem}
-
-Here is a definition:
-\begin{definition}
-  If $z$ is irrational, then by $e^z$ we mean the
-  unique number that has
-  logarithm $z$:
-  \begin{displaymath}
-    \log e^z = z.
-  \end{displaymath}
-\end{definition}
-
-The pre-defined theorem-like constructs are \textbf{theorem},
-\textbf{conjecture}, \textbf{proposition}, \textbf{lemma} and
-\textbf{corollary}.  The pre-defined de\-fi\-ni\-ti\-on-like constructs are
-\textbf{example} and \textbf{definition}.  You can add your own
-constructs using the \textsl{amsthm} interface~\cite{Amsthm15}.  The
-styles used in the \verb|\theoremstyle| command are \textbf{acmplain}
-and \textbf{acmdefinition}.
-
-Another construct is \textbf{proof}, for example,
-
-\begin{proof}
-  Suppose on the contrary there exists a real number $L$ such that
-  \begin{displaymath}
-    \lim_{x\rightarrow\infty} \frac{f(x)}{g(x)} = L.
-  \end{displaymath}
-  Then
-  \begin{displaymath}
-    l=\lim_{x\rightarrow c} f(x)
-    = \lim_{x\rightarrow c}
-    \left[ g{x} \cdot \frac{f(x)}{g(x)} \right ]
-    = \lim_{x\rightarrow c} g(x) \cdot \lim_{x\rightarrow c}
-    \frac{f(x)}{g(x)} = 0\cdot L = 0,
-  \end{displaymath}
-  which contradicts our assumption that $l\neq 0$.
-\end{proof}
-
-\section{Conclusions}
-This paragraph will end the body of this sample document.
-Remember that you might still have Acknowledgments or
-Appendices; brief samples of these
-follow.  There is still the Bibliography to deal with; and
-we will make a disclaimer about that here: with the exception
-of the reference to the \LaTeX\ book, the citations in
-this paper are to articles which have nothing to
-do with the present subject and are used as
-examples only.
-%\end{document}  % This is where a 'short' article might terminate
+\end{itemize}
 
 
 
-\appendix
-%Appendix A
-\section{Headings in Appendices}
-The rules about hierarchical headings discussed above for
-the body of the article are different in the appendices.
-In the \textbf{appendix} environment, the command
-\textbf{section} is used to
-indicate the start of each Appendix, with alphabetic order
-designation (i.e., the first is A, the second B, etc.) and
-a title (if you include one).  So, if you need
-hierarchical structure
-\textit{within} an Appendix, start with \textbf{subsection} as the
-highest level. Here is an outline of the body of this
-document in Appendix-appropriate form:
-\subsection{Introduction}
-\subsection{The Body of the Paper}
-\subsubsection{Type Changes and  Special Characters}
-\subsubsection{Math Equations}
-\paragraph{Inline (In-text) Equations}
-\paragraph{Display Equations}
-\subsubsection{Citations}
-\subsubsection{Tables}
-\subsubsection{Figures}
-\subsubsection{Theorem-like Constructs}
-\subsubsection*{A Caveat for the \TeX\ Expert}
-\subsection{Conclusions}
-\subsection{References}
-Generated by bibtex from your \texttt{.bib} file.  Run latex,
-then bibtex, then latex twice (to resolve references)
-to create the \texttt{.bbl} file.  Insert that \texttt{.bbl}
-file into the \texttt{.tex} source file and comment out
-the command \texttt{{\char'134}thebibliography}.
-% This next section command marks the start of
-% Appendix B, and does not continue the present hierarchy
-\section{More Help for the Hardy}
+% Typically, the body of a paper is organized into a hierarchical
+% structure, with numbered or unnumbered headings for sections,
+% subsections, sub-subsections, and even smaller sections.  The command
+% \texttt{{\char'134}section} that precedes this paragraph is part of
+% such a hierarchy.\footnote{This is a footnote.} \LaTeX\ handles the
+% numbering and placement of these headings for you, when you use the
+% appropriate heading commands around the titles of the headings.  If
+% you want a sub-subsection or smaller part to be unnumbered in your
+% output, simply append an asterisk to the command name.  Examples of
+% both numbered and unnumbered headings will appear throughout the
+% balance of this sample document.
 
-Of course, reading the source code is always useful.  The file
-\path{acmart.pdf} contains both the user guide and the commented
-code.
+% Because the entire article is contained in the \textbf{document}
+% environment, you can indicate the start of a new paragraph with a
+% blank line in your input file; that is why this sentence forms a
+% separate paragraph.
 
-\begin{acks}
-  The authors would like to thank Dr. Yuhua Li for providing the
-  MATLAB code of the \textit{BEPS} method.
+% \subsection{Type Changes and {\itshape Special} Characters}
 
-  The authors would also like to thank the anonymous referees for
-  their valuable comments and helpful suggestions. The work is
-  supported by the \grantsponsor{GS501100001809}{National Natural
-    Science Foundation of
-    China}{http://dx.doi.org/10.13039/501100001809} under Grant
-  No.:~\grantnum{GS501100001809}{61273304}
-  and~\grantnum[http://www.nnsf.cn/youngscientists]{GS501100001809}{Young
-    Scientists' Support Program}.
+% We have already seen several typeface changes in this sample.  You can
+% indicate italicized words or phrases in your text with the command
+% \texttt{{\char'134}textit}; emboldening with the command
+% \texttt{{\char'134}textbf} and typewriter-style (for instance, for
+% computer code) with \texttt{{\char'134}texttt}.  But remember, you do
+% not have to indicate typestyle changes when such changes are part of
+% the \textit{structural} elements of your article; for instance, the
+% heading of this subsection will be in a sans serif\footnote{Another
+%   footnote here.  Let's make this a rather long one to see how it
+%   looks.} typeface, but that is handled by the document class file.
+% Take care with the use of\footnote{Another footnote.}  the
+% curly braces in typeface changes; they mark the beginning and end of
+% the text that is to be in the different typeface.
 
-\end{acks}
+% You can use whatever symbols, accented characters, or non-English
+% characters you need anywhere in your document; you can find a complete
+% list of what is available in the \textit{\LaTeX\ User's Guide}
+% \cite{Lamport:LaTeX}.
+
+% % \subsection{Math Equations}
+% You may want to display math equations in three distinct styles:
+% inline, numbered or non-numbered display.  Each of
+% the three are discussed in the next sections.
+
+% % \subsubsection{Inline (In-text) Equations}
+% A formula that appears in the running text is called an
+% inline or in-text formula.  It is produced by the
+% \textbf{math} environment, which can be
+% invoked with the usual \texttt{{\char'134}begin\,\ldots{\char'134}end}
+% construction or with the short form \texttt{\$\,\ldots\$}. You
+% can use any of the symbols and structures,
+% from $\alpha$ to $\omega$, available in
+% \LaTeX~\cite{Lamport:LaTeX}; this section will simply show a
+% few examples of in-text equations in context. Notice how
+% this equation:
+% \begin{math}
+%   \lim_{n\rightarrow \infty}x=0
+% \end{math},
+% set here in in-line math style, looks slightly different when
+% set in display style.  (See next section).
+
+% \subsubsection{Display Equations}
+% A numbered display equation---one set off by vertical space from the
+% text and centered horizontally---is produced by the \textbf{equation}
+% environment. An unnumbered display equation is produced by the
+% \textbf{displaymath} environment.
+
+% Again, in either environment, you can use any of the symbols
+% and structures available in \LaTeX\@; this section will just
+% give a couple of examples of display equations in context.
+% First, consider the equation, shown as an inline equation above:
+% \begin{equation}
+%   \lim_{n\rightarrow \infty}x=0
+% \end{equation}
+% Notice how it is formatted somewhat differently in
+% the \textbf{displaymath}
+% environment.  Now, we'll enter an unnumbered equation:
+% \begin{displaymath}
+%   \sum_{i=0}^{\infty} x + 1
+% \end{displaymath}
+% and follow it with another numbered equation:
+% \begin{equation}
+%   \sum_{i=0}^{\infty}x_i=\int_{0}^{\pi+2} f
+% \end{equation}
+% just to demonstrate \LaTeX's able handling of numbering.
+
+% \subsection{Citations}
+% Citations to articles~\cite{bowman:reasoning,
+% clark:pct, braams:babel, herlihy:methodology},
+% conference proceedings~\cite{clark:pct} or maybe
+% books \cite{Lamport:LaTeX, salas:calculus} listed
+% in the Bibliography section of your
+% article will occur throughout the text of your article.
+% You should use BibTeX to automatically produce this bibliography;
+% you simply need to insert one of several citation commands with
+% a key of the item cited in the proper location in
+% the \texttt{.tex} file~\cite{Lamport:LaTeX}.
+% The key is a short reference you invent to uniquely
+% identify each work; in this sample document, the key is
+% the first author's surname and a
+% word from the title.  This identifying key is included
+% with each item in the \texttt{.bib} file for your article.
+
+% The details of the construction of the \texttt{.bib} file
+% are beyond the scope of this sample document, but more
+% information can be found in the \textit{Author's Guide},
+% and exhaustive details in the \textit{\LaTeX\ User's
+% Guide} by Lamport~\shortcite{Lamport:LaTeX}.
+
+% This article shows only the plainest form
+% of the citation command, using \texttt{{\char'134}cite}.
+
+% Some examples.  A paginated journal article \cite{Abril07}, an enumerated
+% journal article \cite{Cohen07}, a reference to an entire issue \cite{JCohen96},
+% a monograph (whole book) \cite{Kosiur01}, a monograph/whole book in a series (see 2a in spec. document)
+% \cite{Harel79}, a divisible-book such as an anthology or compilation \cite{Editor00}
+% followed by the same example, however we only output the series if the volume number is given
+% \cite{Editor00a} (so Editor00a's series should NOT be present since it has no vol. no.),
+% a chapter in a divisible book \cite{Spector90}, a chapter in a divisible book
+% in a series \cite{Douglass98}, a multi-volume work as book \cite{Knuth97},
+% an article in a proceedings (of a conference, symposium, workshop for example)
+% (paginated proceedings article) \cite{Andler79}, a proceedings article
+% with all possible elements \cite{Smith10}, an example of an enumerated
+% proceedings article \cite{VanGundy07},
+% an informally published work \cite{Harel78}, a doctoral dissertation \cite{Clarkson85},
+% a master's thesis: \cite{anisi03}, an online document / world wide web
+% resource \cite{Thornburg01, Ablamowicz07, Poker06}, a video game (Case 1) \cite{Obama08} and (Case 2) \cite{Novak03}
+% and \cite{Lee05} and (Case 3) a patent \cite{JoeScientist001},
+% work accepted for publication \cite{rous08}, 'YYYYb'-test for prolific author
+% \cite{SaeediMEJ10} and \cite{SaeediJETC10}. Other cites might contain
+% 'duplicate' DOI and URLs (some SIAM articles) \cite{Kirschmer:2010:AEI:1958016.1958018}.
+% Boris / Barbara Beeton: multi-volume works as books
+% \cite{MR781536} and \cite{MR781537}.
+
+% A couple of citations with DOIs: \cite{2004:ITE:1009386.1010128,
+%   Kirschmer:2010:AEI:1958016.1958018}. 
+
+% Online citations: \cite{TUGInstmem, Thornburg01, CTANacmart}.  
+
+
+% \subsection{Tables}
+% Because tables cannot be split across pages, the best
+% placement for them is typically the top of the page
+% nearest their initial cite.  To
+% ensure this proper ``floating'' placement of tables, use the
+% environment \textbf{table} to enclose the table's contents and
+% the table caption.  The contents of the table itself must go
+% in the \textbf{tabular} environment, to
+% be aligned properly in rows and columns, with the desired
+% horizontal and vertical rules.  Again, detailed instructions
+% on \textbf{tabular} material
+% are found in the \textit{\LaTeX\ User's Guide}.
+
+% Immediately following this sentence is the point at which
+% Table~\ref{tab:freq} is included in the input file; compare the
+% placement of the table here with the table in the printed
+% output of this document.
+
+% \begin{table}
+%   \caption{Frequency of Special Characters}
+%   \label{tab:freq}
+%   \begin{tabular}{ccl}
+%     \toprule
+%     Non-English or Math&Frequency&Comments\\
+%     \midrule
+%     \O & 1 in 1,000& For Swedish names\\
+%     $\pi$ & 1 in 5& Common in math\\
+%     \$ & 4 in 5 & Used in business\\
+%     $\Psi^2_1$ & 1 in 40,000& Unexplained usage\\
+%   \bottomrule
+% \end{tabular}
+% \end{table}
+
+% To set a wider table, which takes up the whole width of the page's
+% live area, use the environment \textbf{table*} to enclose the table's
+% contents and the table caption.  As with a single-column table, this
+% wide table will ``float'' to a location deemed more desirable.
+% Immediately following this sentence is the point at which
+% Table~\ref{tab:commands} is included in the input file; again, it is
+% instructive to compare the placement of the table here with the table
+% in the printed output of this document.
+
+
+% \begin{table*}
+%   \caption{Some Typical Commands}
+%   \label{tab:commands}
+%   \begin{tabular}{ccl}
+%     \toprule
+%     Command &A Number & Comments\\
+%     \midrule
+%     \texttt{{\char'134}author} & 100& Author \\
+%     \texttt{{\char'134}table}& 300 & For tables\\
+%     \texttt{{\char'134}table*}& 400& For wider tables\\
+%     \bottomrule
+%   \end{tabular}
+% \end{table*}
+% % end the environment with {table*}, NOTE not {table}!
+
+% It is strongly recommended to use the package booktabs~\cite{Fear05}
+% and follow its main principles of typography with respect to tables:
+% \begin{enumerate}
+% \item Never, ever use vertical rules.
+% \item Never use double rules.
+% \end{enumerate}
+% It is also a good idea not to overuse horizontal rules.
+
+
+% \subsection{Figures}
+
+% Like tables, figures cannot be split across pages; the best placement
+% for them is typically the top or the bottom of the page nearest their
+% initial cite.  To ensure this proper ``floating'' placement of
+% figures, use the environment \textbf{figure} to enclose the figure and
+% its caption.
+
+% This sample document contains examples of \texttt{.eps} files to be
+% displayable with \LaTeX.  If you work with pdf\LaTeX, use files in the
+% \texttt{.pdf} format.  Note that most modern \TeX\ systems will convert
+% \texttt{.eps} to \texttt{.pdf} for you on the fly.  More details on
+% each of these are found in the \textit{Author's Guide}.
+
+% \begin{figure}
+% \includegraphics{fly}
+% \caption{A sample black and white graphic.}
+% \end{figure}
+
+% \begin{figure}
+% \includegraphics[height=1in, width=1in]{fly}
+% \caption{A sample black and white graphic
+% that has been resized with the \texttt{includegraphics} command.}
+% \end{figure}
+
+
+% As was the case with tables, you may want a figure that spans two
+% columns.  To do this, and still to ensure proper ``floating''
+% placement of tables, use the environment \textbf{figure*} to enclose
+% the figure and its caption.  And don't forget to end the environment
+% with \textbf{figure*}, not \textbf{figure}!
+
+% \begin{figure*}
+% \includegraphics{flies}
+% \caption{A sample black and white graphic
+% that needs to span two columns of text.}
+% \end{figure*}
+
+
+% \begin{figure}
+% \includegraphics[height=1in, width=1in]{rosette}
+% \caption{A sample black and white graphic that has
+% been resized with the \texttt{includegraphics} command.}
+% \end{figure}
+
+% \subsection{Theorem-like Constructs}
+
+% Other common constructs that may occur in your article are the forms
+% for logical constructs like theorems, axioms, corollaries and proofs.
+% ACM uses two types of these constructs:  theorem-like and
+% definition-like.
+
+% Here is a theorem:
+% \begin{theorem}
+%   Let $f$ be continuous on $[a,b]$.  If $G$ is
+%   an antiderivative for $f$ on $[a,b]$, then
+%   \begin{displaymath}
+%     \int^b_af(t)\,dt = G(b) - G(a).
+%   \end{displaymath}
+% \end{theorem}
+
+% Here is a definition:
+% \begin{definition}
+%   If $z$ is irrational, then by $e^z$ we mean the
+%   unique number that has
+%   logarithm $z$:
+%   \begin{displaymath}
+%     \log e^z = z.
+%   \end{displaymath}
+% \end{definition}
+
+% The pre-defined theorem-like constructs are \textbf{theorem},
+% \textbf{conjecture}, \textbf{proposition}, \textbf{lemma} and
+% \textbf{corollary}.  The pre-defined de\-fi\-ni\-ti\-on-like constructs are
+% \textbf{example} and \textbf{definition}.  You can add your own
+% constructs using the \textsl{amsthm} interface~\cite{Amsthm15}.  The
+% styles used in the \verb|\theoremstyle| command are \textbf{acmplain}
+% and \textbf{acmdefinition}.
+
+% Another construct is \textbf{proof}, for example,
+
+% \begin{proof}
+%   Suppose on the contrary there exists a real number $L$ such that
+%   \begin{displaymath}
+%     \lim_{x\rightarrow\infty} \frac{f(x)}{g(x)} = L.
+%   \end{displaymath}
+%   Then
+%   \begin{displaymath}
+%     l=\lim_{x\rightarrow c} f(x)
+%     = \lim_{x\rightarrow c}
+%     \left[ g{x} \cdot \frac{f(x)}{g(x)} \right ]
+%     = \lim_{x\rightarrow c} g(x) \cdot \lim_{x\rightarrow c}
+%     \frac{f(x)}{g(x)} = 0\cdot L = 0,
+%   \end{displaymath}
+%   which contradicts our assumption that $l\neq 0$.
+% \end{proof}
+
+% \section{Conclusions}
+% This paragraph will end the body of this sample document.
+% Remember that you might still have Acknowledgments or
+% Appendices; brief samples of these
+% follow.  There is still the Bibliography to deal with; and
+% we will make a disclaimer about that here: with the exception
+% of the reference to the \LaTeX\ book, the citations in
+% this paper are to articles which have nothing to
+% do with the present subject and are used as
+% examples only.
+% %\end{document}  % This is where a 'short' article might terminate
+
+
+
+% \appendix
+% %Appendix A
+% \section{Headings in Appendices}
+% The rules about hierarchical headings discussed above for
+% the body of the article are different in the appendices.
+% In the \textbf{appendix} environment, the command
+% \textbf{section} is used to
+% indicate the start of each Appendix, with alphabetic order
+% designation (i.e., the first is A, the second B, etc.) and
+% a title (if you include one).  So, if you need
+% hierarchical structure
+% \textit{within} an Appendix, start with \textbf{subsection} as the
+% highest level. Here is an outline of the body of this
+% document in Appendix-appropriate form:
+% \subsection{Introduction}
+% \subsection{The Body of the Paper}
+% \subsubsection{Type Changes and  Special Characters}
+% \subsubsection{Math Equations}
+% \paragraph{Inline (In-text) Equations}
+% \paragraph{Display Equations}
+% \subsubsection{Citations}
+% \subsubsection{Tables}
+% \subsubsection{Figures}
+% \subsubsection{Theorem-like Constructs}
+% \subsubsection*{A Caveat for the \TeX\ Expert}
+% \subsection{Conclusions}
+% \subsection{References}
+% Generated by bibtex from your \texttt{.bib} file.  Run latex,
+% then bibtex, then latex twice (to resolve references)
+% to create the \texttt{.bbl} file.  Insert that \texttt{.bbl}
+% file into the \texttt{.tex} source file and comment out
+% the command \texttt{{\char'134}thebibliography}.
+% % This next section command marks the start of
+% % Appendix B, and does not continue the present hierarchy
+% \section{More Help for the Hardy}
+
+% Of course, reading the source code is always useful.  The file
+% \path{acmart.pdf} contains both the user guide and the commented
+% code.
+
+% \begin{acks}
+%   The authors would like to thank Dr. Yuhua Li for providing the
+%   MATLAB code of the \textit{BEPS} method.
+
+%   The authors would also like to thank the anonymous referees for
+%   their valuable comments and helpful suggestions. The work is
+%   supported by the \grantsponsor{GS501100001809}{National Natural
+%     Science Foundation of
+%     China}{http://dx.doi.org/10.13039/501100001809} under Grant
+%   No.:~\grantnum{GS501100001809}{61273304}
+%   and~\grantnum[http://www.nnsf.cn/youngscientists]{GS501100001809}{Young
+%     Scientists' Support Program}.
+
+% \end{acks}
+
+\section{Motivation}
+
+\begin{itemize}
+\item[$\square$] Why is the problem a problem?
+\item[$\square$] A real world consequence
+\end{itemize}
+
+\subsection{Running Example}
+\begin{itemize}
+\item[$\square$]A persona in the setting
+\end{itemize}
+
+\subsection{Terminology}
+\begin{itemize}
+\item[$\square$]Terms related to the research i.e. activities, episodes etc.
+\item[$\square$]Meaning of different categories of these.
+\end{itemize}
+
+\section{Results}
+
+\subsection{Observations}
+\begin{itemize}
+\item[$\square$]A persona in the setting
+\end{itemize}
+\subsubsection{Target Shooting}
+
+S1 was designing and building an application by himself. Throughout the observation session, S1 catered not only to the design of his solution, but also to the architecture of the system. The session was purely exploratory, S1 had some idea of how he wanted his application to be, but no firm design or implementation. The session could not be identified as `Feature Implementation' or `Debugging', both of these activities were observed interleaved. The following observations were made from the observation session:
+
+\begin{itemize}
+
+\item \textbf{Activities revolved around a target:} Throughout the session, a group of S1\textquotesingle s activities revolved around a target. These groups of activities and targets are easily identifiable with an abstract knowledge of the code and description of the goal. S1 followed a pattern of identifying a target and shooting  at it until the desired behavior was reached.
+
+\vspace{5pt}
+
+\item \textbf{Strategies of to identify targets:} We observed two prominent strategies that S1 followed to identify his targets:
+\vspace{5pt}
+\begin{itemize}
+\item \textbf{Targets as encountered:}  Targets were identified during runtime most often. S1 would use the application to see if it behaved as desired. Any error, fault or failure was a target. In addition to that, S1 also identified certain behavior of the application that did not match his design as a target.
+\vspace{5pt}
+\item \textbf{Targets defined:} There was a running set of targets that S1 had. Most of these were related to all the features he wanted to implement, or changes he wanted to make in to future. Once all targets from the runtime was eliminated, S1 would fall back to the running set of defined targets. The number of targets in this set would increase or decrease with the activities. New targets are added to the list while working on other targets. But targets are rarely eliminated unless S1 exclusively worked on it.
+\vspace{5pt}
+\item \textbf{Sequence of targets:} There were instances during the session where a sequence of segments of activities were used to shoot targets that was identified during the immediately 2 or 3 preceding segments. These were instances where a bug covered the exposure of another bug, or when events that take place earlier another are buggy masking the bug in the succeeding event's behavior. In one instance, S1 performed a shotgun surgery leading to targets emerging one after the other.
+\end{itemize}
+\vspace{5pt}
+
+\item \textbf{Target stages:} S1\textquotesingle s sequence of activities map to the various stages of evolution of his targets. Activities can be grouped according to what was happening to one or more targets. S1's observation session revealed four distinguishable stages through which the targets are identified and eliminated:
+
+\begin{itemize}
+\item \textbf{Explore:} An exploration stage starts with the target set $T = \emptyset$. This is where S1 recalled his goals from another session and from exploring the application's behavior. After this stage S1 has at least one target in the set  $T=\{t_i \mid i={1,\dots,n}\}$. 
+\vspace{5pt}
+\item \textbf{Identify:} When there were more that one targets in $T$, i.e. $ n(T) > 1 $, immediately after exploration S1 focused on identifying a working target $t_w, where, 1 \leq w \leq n $. S1\textquotesingle s activities during this time was mostly inspecting self code and examining existing code with long periods of scrolling and inactivity inside the IDE. The selection of $t_w$ from $T$ is based on different characteristics of the targets like ease of solving, dependency on other targets, eliminating $t_w$ eliminates other targets from the set, relevance of the target to the goal and priority of the target. At one point, S1 had 2 possible targets tied to the same goal. S1 bounced back and forth between the two targets and finally chose $t_2$ because \textit{"$t_2$ was simpler whereas $t_1$ was a behavior happening across time"}. Another time, S1 chose $t_m$ over $t_p$ even though $t_m$ was a subproblem, because \textit{"$t_m$ was a quick fix, and [S1] wanted to try it out to see what happens before moving on to $t_p$"}. Such a choice is \textbf{non-intuitive} and defies \textbf{IFT} concepts of information value.
+\vspace{5pt}
+\item \textbf{Edit:} When S1 found a working target $t_w$, he would edit the relevant part of the artifact. If $t_w$ was a certain cue like error declaration found during \textit{Identification} stage, S1 moved to the part of the code which contained the relevant method or line to edit. If it was an anomalous behavior that didn't match his vision, S1 moved to examine the existing code to find an entry point to the relevant part of the artifact. Once the relevant part is found, S1 edits it, or shoots the target. There were cases where S1 shot at multiple targets at once and other cases where S1 shot at a \textit{super-target}, i.e. a target having more that one sub-targets.
+\vspace{5pt}
+\item \textbf{Assess:} Immediately after every edit activity, S1 performed an impact assessment of the shot taken. S1 always performed \textit{Assessment} by launching his application and checking for the behavior. During this stage targets maybe eliminated i.e. reduction of target set $T=\{t_i \mid i={1,\dots,m}\}, where, m<n $. But during many cases, the shot taken at the working target $t_w$ failed to produce desired effect. In such cases where S1 aimed incorrectly, he either immediately returned to \textit{Edit} stage to shoot again or spent time in the application window marked by long periods of inactivity. These inactive periods were maybe used to reflect on why he missed the target. When the target was missed, in most cases the target set remain unchanged. However, there were cases when new targets were added even after a missed shot because it revealed new anomalous behavior causing an increase in the number of running targets in the set $T=\{t_i \mid i={1,\dots,k}\} , where, k>n $. In cases where S1 successfully eliminated a target, he either returned to identify the next working target $t_w$ from the running set of targets $T$, or it lead to a \textbf{sequential target}. S1 says such sequential targets are exposed after a target is eliminated because of \textit{"overlying bugs on top of other bugs"}. These sequential targets get added to $T$, and in most cases are relevant to the previous working target causing S1 to choose it as $t_w$. In one case, S1 decided to choose a target from the running set $T$ that wasn't a sequential target as $t_w$. S1 explained that the application behavior even with the sequential target was \textit{"good enough for the time being"} and prior running targets were more important. 
+\vspace{5pt}
+\end{itemize}
+
+\item \textbf{Activities may reveal targets and target-stages:} The target stages can be clearly identified with the sequence of activities performed. E.g. Examining code [AU3] is tied to the Exploration and Identification stages, however if examining code [AU3] was followed by assessment of changes [AI5], S1 was performing Identification of working target. Similarly editing code [AI1] is mostly tied to the the target phase Edit. Yet there were instances when S1 made edits to the code [AI1] e.g. print statements to print the number of objects, following which S1 took the necessary steps on the application to see the output of the print statements. Thus, in this case, edit [AI1] followed by assessment of changes [AI5] is tied to the Identification stage of the target. \newline
+It is harder to define the targets from the activities. To define the targets it is necessary to observe the artifacts being used in the activities, and often observing 2 or 3 such segments are necessary for identifying the targets. 
+\end{itemize}
+
+\subsubsection{Context in shooting} S1 maintained a context 
+\subsection{Hypotheses}
+
+\section{Implications and Future Work}
+
+\section{Discussion and Limitations}
+
+\section{Related Work}
+
+\section{Conclusion}
+
+\section{Acknowledgements}
+
+\section{Appendix}
+
+\section{FAQs}
