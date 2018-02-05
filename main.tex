@@ -48,6 +48,12 @@
 \editor{Theo D'Hondt}
 \editor{Wolfgang De Meuter}
 
+\newif\ifdraft
+\drafttrue
+
+\newcommand{\boldification}[1]{\ifdraft\indent\textbf{#1}\\\indent\else\relax\fi}
+
+
 
 \begin{document}
 \title{What's in your context?}
@@ -180,7 +186,9 @@ ACM SIG Proceedings.\footnote{This is an abstract footnote}
 
 \maketitle
 
-\input{body.tex}
+\input{intro}
+\input{related}
+\input{method}
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{sample-bibliography} 
