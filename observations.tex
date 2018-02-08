@@ -6,7 +6,7 @@
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{figures/P1timeplot}
-\caption{(traffic prompt, 10-minute duration)}
+\caption{Snippet of Activities and Artifacts from P1(traffic intersection prompt, 8-minute duration)}
 \label{P1Fig}
 \end{figure}
 
@@ -14,9 +14,9 @@
 In this paper, we investigate how people create context for programming tasks. We present the observations we draw from the participants' interactions with the artifacts during specific programming activities. Our focus was to develop an understanding of how the context building process occurs, and gain insights into which factors play a role in shaping context.
 
 
-We observe the types of artifacts that participants refer to when performing different programming activity. The participants interacted with 6 different types of artifacts - \textit{source code files} (c1.js, c2.java, etc.), \textit{documents} (task prompt), \textit{IDE tools} (New class dialog box, getter-setter dialog box (t2), terminal/console etc.),\textit{ web resources} (Google search results, Stack-Overflow pages, API documentations etc.), \textit{externalized artifacts} (sticky notes, paper diagrams, etc.), and \textit{other} (calculators, project setup dialog box etc.).
+We observe the types of artifacts that participants refer to when performing different programming activity. The participants interacted with six different types of artifacts: \textit{source code files} (e.g. \texttt{intersection.js} and \texttt{car.java}), \textit{documents} (task prompt), \textit{IDE tools} (\textit{New Class} dialog box, getter-setter dialog boxes (e.g. \texttt{T2}), terminal/console),\textit{ web resources} (e.g. Google search results, Stack-Overflow pages, API documentations), \textit{externalized artifacts} (e.g. sticky notes, paper diagrams), and \textit{other} (e.g. calculators, project setup dialog boxes).
 
-For our analysis purpose, for each participant, we will refer to the source code files as c1, c2, \ldots , etc., the document as d1, IDE tools as t1, t2, \ldots, etc., web resources as w1, w2, \ldots, etc., external artifacts as ex1, ex2, \ldots, etc., and other tools as o1, o2, \ldots, etc. The sequence of these tags depend on the sequence in which each participant encounters an artifact of a type. 
+For our analysis purpose, for each participant, we will refer to the source code files as \texttt{C1}, \texttt{C2}, \ldots , etc., the document as \texttt{D1}, IDE tools as \texttt{T1}, \texttt{T2}, \ldots, etc., web resources as \texttt{W1}, \texttt{W2}, \ldots, etc., external artifacts as \texttt{EX1}, \texttt{EX2}, \ldots, etc., and other tools as \texttt{O1}, \texttt{O2}, \ldots, etc. The sequence of these tags depend on the sequence in which each participant encounters an artifact of one of the six type. 
 %%% INSERTING FIGURE FOR P4'S ACTIVITIES AND ARTIFACTS HERE.
 
 % We didn't restrict our observation to any medium, as context is a broad notion and anything around a person, from the placement of a paper to the color of the screen, can affect it. We also collected diverse data in the form or think aloud, screen capture, facial expression, video of workspace and any notes or diagrams the participants drew to recognize the subtle hints which may suggest that information was added to the context or obtained from the context. 
@@ -30,12 +30,57 @@ For our analysis purpose, for each participant, we will refer to the source code
 
 %There are 7 code files (which we coded as c1.java, c2.java, \ldots, c7.java) that P4 created and worked with iteratively during the observational session. She used 6 IDE tools (t1, t2,..., t6) and referred to 1 document (d1) during this time. However, she also referred to 2 web sources (coded as w1 and w2) and created two external artifacts on paper (ex1 and ex2) that she repeatedly referred to.
 
-\subsection{\textit{Same} artifacts, \textit{Different} activities}
+\subsection{Artifacts span heterogeneous medium}
+\boldification{**participants used all kinds of artifacts**}
+Our participants not only accessed code artifacts, but also tools within the IDE, online resources, and external documents to help them in their programming task. Here we discuss the different types of artifacts and the frequency in which they were used.
+
+\boldification{**code was obviously the most}
+Participants, as can be expected, accessed the code artifacts most frequently when involved in their coding activity (\texttt{A0}). During their hour-long session, P1 accessed three code files 87 times, P4 accessed seven code files 49 times, and P6 accessed four code files 147 times. 
+
+\boldification{**next was online resources. P6 used website this way}
+The next most frequently accessed artifacts were online resources, such as web sites. Participants often used these resources to learn how to use a feature or recall implementation details. For example, P6 accessed seven web resources 91 times---he used blog posts to learn how to correctly use the ``draggable'' feature when he had difficulty implementing it.
+
+\boldification{**people also used external artifacts - designing, enriching. P1 did this. Here is his external artifact pictures}
+We found that participants also engaged frequently in creating external artifacts (e.g., notes, updating the traffic prompt, creating diagrams etc.). Figure~\ref{P1Fig} shows a plot of P1's activities and the artifacts he interacts with for a (10 min) segment of his session. We found that P1 (based on his think aloud data) was ideating about the solution in this segment. If we simply analyze his online interactions it shows that he was interacting with the code [c1] while his programming activity switched between coding [A0] or being idle [A1]. However, during this time he was in fact ideating different solutions, as shown in Figure (??). More specifically he was modeling the traffic movement at the intersection (Fig a) and the data model to represent the  intersections (Figure X).
+
+% From the plot, near the 22 minute mark, when P1 interacts with the code artifact c1, he was ideating while thinking aloud. However, his programming activities go from idle [A11] to communicating [A2] to selecting parts of the code as part of thinking aloud (marked as coding [A0]) and back to being idle [A11] in the IDE. 
+
+%Simply analyzing artifacts in the IDE, such as different code files, as the primary source of context as done by the representational view can leave gaps in our understanding.
+
+\boldification{**This means just looking at artifacts that are within IDE like Gail does leaves big gaps}
+Our observations indicate that when defining context and how it is built, we need to also consider artifacts that are outside the IDE, as well as other medium such as paper. Not doing so, as has been done in the past [??] leaves gaps in our understanding and the ability to model context.
+
+% is built we need to 
+% looking only at online (especially code) artifacts provide a tiny facet of what makes constitutes the whole process of context building during a programming task. During the interaction with web resources and periods of ideating, participants made progress towards solving the problem which they later implement. These non-IDE sources are factors that affect context, if not being part of the context itself.
+
+\subsection{Programming activity guides interaction with artifacts}
+
+\boldification{Participants accessed same artifacts for many different purposes (different aspects of programming). We find that the same artifacts were used to create context (understanding a problem, ideate) and apply context to form solution (form solution, code)**. For example?..in table x, we see?.}
+
+* Same artifact, different activities -> interaction is driven on activity
+* Same activity, different artifacts -> interactions depends on the properties of artifacts
+* Activity and artifact together guides the interaction
+
+Interact with artifacts == activities?
+
+We observed that the way participants interact with artifacts
+
+
+with artifacts from different mediums are dependent on the type of these
+
+Participant interact with artifacts spanned across different mediums, and when performing different activities on these different type of artifacts, the interaction varies.
+
+\boldification{**activity guided which artifacts and the interaction with the artifacts. P6 example of code artifact for coding and searching activity}
+Overall, the programming activity guided the kinds of artifacts (and the medium) that were accessed and also how participants interacted with the artifact. For example, P6 when interacting with the the code artifact (c) was actually involved in 2 separate activity (coding and searching). When actually updating a feature he produces new code in C, but then he realizes that he needs to update all the other parts of the program was affected. Therefore, he searches for the particular term (time). While both types of acitvities (a0, a) required P6 to interact with teh code artifact c0, the type of interaction varied. WHen producing code he ypes... and when searching. he...does this.
+
+-->however, we also observed that the interactions with these artifacts were guided by the activities being performed with the artifacts. For example, P6 in Figure~\ref{P6Fig}.A is observed interacting with a source code file (\texttt{C1}, \textit{Artifacts}) while coding (\texttt{A0}, \textit{Activities}) from 00:15:57 to 00:16:29, but then switches to searching (\texttt{A5}, \textit{Activities}) for all instances of a particular term within the project from 00:16:29 to 00:17:02. Both of these activities occur within the same source code file, but the purpose and interactions are different. When coding (\texttt{A0}, \textit{Activities}) within the source code file, P6 primarily types in short bursts that are interspersed with scrolling interactions. When searching (\texttt{A5}, \textit{Activities}) within the source code file, P6 primarily scrolls with intermittent highlighting and copying of text.
+
+
 
 \boldification{Participants accessed same artifacts for many different purposes (different aspects of programming). We find that the same artifacts were used to create context (understanding a problem, ideate) and apply context to form solution (form solution, code)**. For example?..in table x, we see?.}
 
 
-Across different programming activities, participants access the same artifacts. Figure~\ref{P4Fig} shows the sequence of activities P4 performed and the artifacts she interacted with during a small part of her session. The top bar shows the activities as time progresses, the bottom bar shows the   
+Across different programming activities, participants access the same artifacts. Figure~\ref{P4Fig} shows the sequence of activities P4 performed and the artifacts she interacted with during a small part of her session. On a timed scale, the top bar shows the activities as time progresses, the bottom bar shows the   
 
 We scrutinize P4's activities within a smaller window of time.
 - coding to debugging then navigating between 4 different code files followed shortly by navigation to task prompt to read a highlighted portion -- then finally moving to create a new code file.
@@ -48,34 +93,24 @@ On another instance, P4 moved from coding[A0] in c5 to searching on the web [A5]
 
 These observations reveal that the same artifacts are used across different programming activities.This contradicts the representational view of context, which suggest that ``context and activities are separable'' \cite{Dourish:2004,Gasparic:2017}. We see a difference in the type of artifacts across activities. Programming activity is an important aspect to consider when determining context. 
 
-\subsection{Artifacts span heterogeneous medium}
 
-\boldification{**just a single view is not enough**}
-\boldification{**yes code is the most frequent artifact when coding. But we see that outside of IDE a lot of stuff happened...so we need to have a broader aspect. Example [[pictures/ quotes]]}
-It is true that, when working on a programming task, code files are most frequently accessed. P1 accessed three code files 87 times, P4 accessed seven code files 49 times and P6 accessed four code files 147 times during the one hour observation sessions.
-
-However, participants also accessed resources on the website for learning how to use a concept/feature. The interactions with artifacts outside the IDE are also frequent with P6 accessing seven web resources 91 times. P6 uses a blog to learn how to use ``draggable'' feature when he couldn't get the desired function to work.
-
-\boldification{**A lot of time, we saw people ideating and using stuff outside the computer too...this means context is broader than just online artifacts...and important to consider  and help developers capture?}
-We also observed that participants heavily engaged in creating external artifacts (like notes, diagrams etc.), communicating and ideating during these sessions. Figure~\ref{P1Fig} shows a plot of P1's activities and the artifacts he interacts with for a segment of the session. From the plot, near the 22 minute mark, when P1 interacts with the code artifact c1, he was ideating while thinking aloud. However, his programming activities go from idle [A11] to communicating [A2] to selecting parts of the code as part of thinking aloud (marked as coding [A0]) and back to being idle [A11] in the IDE. 
-
-This suggests that looking only at online (especially code) artifacts provide a tiny facet of what makes constitutes the whole process of context building during a programming task. During the interaction with web resources and periods of ideating, participants made progress towards solving the problem which they later implement. These non-IDE sources are factors that affect context, if not being part of the context itself.
 
 \subsection{Programming activity guides interaction with artifacts}
 
 \begin{figure*}
-\includegraphics[width=2.08\columnwidth]{figures/P6timeplot}
-\caption{Snippet of Activities and Artifacts from P6 (real-world development, 10-minute duration)}
+\includegraphics[width=1.98\columnwidth]{figures/P6timeplot}
+\caption{Snippet of Activities and Artifacts from P6 (real-world IDE development, 5-minute duration)}
 \label{P6Fig}
 \end{figure*}
+
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{figures/P4timeplot}
 \caption{Snippet of Activities and Artifacts from P4 (traffic intersection prompt, 3-minute duration)}
 \label{P4Fig}
 \end{figure}
-
 \boldification{**based on the activity, the interaction with artifacts change**}
+
 When participants access the artifacts, the specific interactions with the artifacts -- selecting which part of the artifact to go to, whether they simply scroll through the artifact or highlight parts of the artifact, whether they copy text from these artifacts to paste into the code for debugging -- depends on the programming activity and the goal driving the activity. These differences are also observable through the difference in times spent on these artifacts.
 
 Figure~\ref{P6Fig} shows the artifacts P6 accesses and the activities he performs. A marks the time P6 searched on the web to obtain the syntax for a java script feature. The first time he reaches a Q and A web page containing answers to his question (marked B) on the diagram, he scrolls through the first few answers before selecting one spending around 36 seconds. These interactions was driven by the goal to learn how to implement the feature for the purpose of coding [A0]. When his selected answer threw an error (marked as C), he went back to the web page and quickly scrolled and found the answer he had already identified (marked as D) and copies it to implement. This second visit to the web page took only five seconds and was geared towards recalling the syntax for debugging purposes [A9]. 
@@ -93,10 +128,24 @@ Thus, we see that not only does context rise from the activity, the programming 
 
 \boldification{**this means that?.and is contrary to the assumptions of ?representational view of context, that context is stable and separate from activities? [...], is not what we see in our data. }
 
-\subsection{Interaction includes Reflection on the information gained}
+\subsection{Interaction includes Reflection}
 
 \boldification{**Finally we see that, users conduct reflection/evaluation of the information they come across before deciding their next activity**}
 
+Participants continuously performed evaluation of the information within an artifact and followed up with reflecting upon the information they used towards the solution. We observe these evaluation sessions through interactions that prolong the participant's current activity---long scrolls, reading the artifact multiple times etc. When participants hit a wall, they often went back to 
+
+
+
+Most of the times, the first attempt never leads to 
+
 When interacting with artifacts, participants continuously performed reflection and evaluation of the information before moving to the next programming activity. For example, P1 tried to implement his idea using `case classes' in scala in the code file c3. When trying to define these `case classes' his IDE declared errors. He spent 20 seconds trying to fix the error and reflecting on his prior experiences. He said ``I don't know how to do this'' and so visited the documentation web page w5 and spent 24 seconds reading and scrolling. P1 made some evaluation of the information and effort needed to implement `case class', and decided to ``\dots do it smartly'' and ``\dots just do it with strings''.
+
+Figure \ref{P4Sketch}
+
+\begin{figure}
+\includegraphics[width=\columnwidth]{figures/P4sketches}
+\caption{External artifacts created by P1 during the session}
+\label{P4Sketch}
+\end{figure}
 
 We conclude from all our observations that along with the \textit{representational} and \textit{interactional} components of context, there exists an informational component. Participants looked for different types of information and consumed different amounts of information from various representations that have been known to affect context viz. time, environment etc. The various interactions determined how information was consumed by the participants. 
