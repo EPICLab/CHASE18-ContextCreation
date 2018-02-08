@@ -1,15 +1,24 @@
 %!TEX root = main.tex
 
-\section{Future Directions}
+\section{Discussions}
+\textbf{Limitations:} Like any research our study has limitations. First, this was an exploratory study that only included six participants recruited through convenience sampling. However, all participants had professional programming experience and had five or more years of programming experience. Second, we have different types of data from different participants since our data collection included on-site as well as online (Skype) sessions--only skype sessions (P4) include video recording of the participant. Additionally, only one participant (P1) thought-out aloud. This is not a big limitation as our primary goal was to observe the interactions of participants with artifacts as part of their programming activity, which we can decipher from the screen capture data. Our analysis, therefore, primarily focused on screen-capture data, which we validated further with audio, video, and external (paper) documents when available.
+
+% The observations we discuss in this paper are from the preliminary analysis of data we collected to understand the role of context in programming. Like many other research papers based on formative analysis, our observations  are subject to threats to validity. We chose our participants through convenient sampling and observed participants through online mediums as well as physical mediums. But our focus was to understand how context is created---how artifacts are used, how information is evaluated and mapped to the problem to be solved, and how programming activity guides the interaction with the artifacts. The ``problem is not that context does not matter; it matters a great deal''~\cite{Dourish:2004}, the problem is defining and operationalizing what context is. Hence, it was more important to observe these patterns of interactions and activities than restrict the medium and people we observe these patterns through.
+
+%\subsection{Future Directions}
+\textbf{Future steps: }Our initial analysis reveals two future directions that we plan to pursue. 
 
 \boldification{**Goal: apply IFT to create a model of how the context that is created and recommend artifacts for the context for a given programming activity}
-We plan to explore the application of Information Foraging Theory (IFT)~\cite{Jin:2017,Fleming:2013} to model how context is created during programming, and to develop recommendations of artifacts that are relevant to a given programmer and a programming activity.
 
-\boldification{IFT can be applied, since information seeking and cost-benefit analysis of which artifact is actually useful/worth pursuing}
-IFT is applicable to programmer context since information seeking and cost-benefit analysis are central concerns when examining an artifact for usefulness (or value) to the overarching context of a programming activity.
+\textit{Using Information Foraging Theory to inform context creation:}
+Context has been largely defined as all `relevant information' that an individual needs to complete a task. We believe that Information Foraging Theory(IFT) constructs~\cite{Pirolli:1995,Fleming:2013} can help us model how programmers find information in artifact and decide whether it is relevant as they carry out their tasks. IFT explains that the consumption of information is similar to how animals hunt for food---following scent of their prey and choosing more valuable prey through a cost-benefit analysis. We observed that participants engaged in such evaluation of artifacts and the information contained within when building context. 
 
-\boldification{***IFT also has looked at goals...which is really what guides the interactions with artifacts for a given  programming activity (give examples)}
-\boldification{[RINI or ANITA: Would you write towards this boldification. It is outside of my depth of knowledge regarding IFT. The citation is here: \cite{Piorkowski:2015}]}
+% Although context is ``hard to elucidate''~\cite{Abowd:1999}, time and again researchers claim that context is `relevant information'. Due to this informational nature, and from our observations, the creation of context sits well with Information Foraging Theory(IFT) constructs~\cite{Pirolli:1995,Fleming:2013}. IFT explains that consumption of information is similar to how animals hunt for food---following scent and choosing more valuable preys. We observed that participants engaged in reflection and evaluation of information hen creating and using context. 
+
+IFT has been applied in the programming domain to study how varying goals~\cite{Piorkowski:2015} affect the perceived value of information and how the (perceived) cost of `consuming' information varies across different types of artifacts (e.g., web site vs. Q\&A forum) ~\cite{Jin:2017}. We plan to build on these works to explore how IFT can help model programmers context building behavior. 
+
+%We plan to explore the application of Information Foraging Theory (IFT)~\cite{Jin:2017,Fleming:2013} to model how context is created during programming, and to develop recommendations of artifacts that are relevant to a given programmer and a programming activity. IFT is applicable to programmer context since information seeking and cost-benefit analysis are central concerns when examining an artifact for usefulness (or value) to the overarching context of a programming activity.
+
 
 \boldification{More work is needed on:
 **Mapping
@@ -18,12 +27,18 @@ IFT is applicable to programmer context since information seeking and cost-benef
 **How people recall information, and map information to a context has also not been looked at
 **recall- memory has not been explicitly looked at in the IFT MODEL..recency has been used for predicting behavior, something that needs more investigation
 **externalizing/ enriching information patches
-**This selection of information based on the already existing context is similar to that pointed out in the IFT Domain. Obtaining and processing information has cost associated with it. The cost varies from having to open and process and new page to just recalling information already existing in the context**
-}
+**This selection of information based on the already existing context is similar to that pointed out in the IFT Domain. Obtaining and processing information has cost associated with it. The cost varies from having to open and process and new page to just recalling information already existing in the context**}
 
-Based upon on initial results, more work is needed on:
-\begin{itemize}[leftmargin=6pt, parsep=0pt, topsep=0pt]
-\item \textbf{Mapping}: Examining the mapping between artifacts and context. The process of making sense of information contained within artifacts to determine a fit within a particular context has been alluded to in previous work~\cite{Pirolli:2005}, but has not been examined from operationalization perspective.
-\item \textbf{Memory Models}: Modeling the ways in which programmers recall information and map that information to a particular context. Memory has been examined in the IFT model for predicting information-seeking behavior~\cite{Lawrance:2010,Lawrance:2013}, but there is further work needed to investigate the effects of context.
-\item \textbf{Externalizing/Enriching Information Patches}: Also examined in the domain of IFT, the selection of information based upon the already existing context incurs a cost. Information costs are associated with the effort required to obtain it, but determining whether that information previously existed in context and simply be recalled has not been explored.
-\end{itemize}
+\subsubsection{Mapping and Memory Modeling}
+Our observations show that participants accessed artifacts and reflected on the information contained in them. Past work has alluded to how individuals perform ``sensemaking'' of information contained withing artifacts to fit their (task) goal ~\cite{Pirolli:2005,Grigoreanu:2012}, but the process by which individuals map the information they find to the problem or solution space has not been modeled. Moreover, once a context has been built parts of the context (information) can be useful and recalled from memory for another (programming) task. Further studies are needed to understand how individuals recall snippets of context from other tasks to aid their current one or how temporality of actions may cause decay in memory and the ability to recall context.
+
+% Our observations show that participants continuously make sense of the information to build context. The process of making sense of information contained within artifacts to determine a fit within a particular context has been alluded to in previous work~\cite{Pirolli:2005,Grigoreanu:2012}, but has not been examined from operationalization perspective. Once a context is built, information is recalled form the memory. This information may be from a different context, in which case the applicability of information in a different context has to be re-evaluated.
+
+
+% }
+% \subsubsection{Scope for Further work:}
+% \begin{itemize}[leftmargin=6pt, parsep=0pt, topsep=0pt]
+% \item \textbf{Mapping}: Examining the mapping between artifacts and context. The process of making sense of information contained within artifacts to determine a fit within a particular context has been alluded to in previous work~\cite{Pirolli:2005}, but has not been examined from operationalization perspective.
+% \item \textbf{Memory Models}: Modeling the ways in which programmers recall information and map that information to a particular context. Memory has been examined in the IFT model for predicting information-seeking behavior~\cite{Lawrance:2010,Lawrance:2013}, but there is further work needed to investigate the effects of context.
+% \item \textbf{Externalizing/Enriching Information Patches}: Also examined in the domain of IFT, the selection of information based upon the already existing context incurs a cost. Information costs are associated with the effort required to obtain it, but determining whether that information previously existed in context and can simply be recalled has not been explored.
+% \end{itemize}

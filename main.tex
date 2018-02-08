@@ -1,5 +1,5 @@
 %%%% Proceedings format for most of ACM conferences (with the exceptions listed below) and all ICPS volumes.
-\documentclass[sigconf]{acmart}
+\documentclass[sigconf,anonymous]{acmart}
 %%%% As of March 2017, [siggraph] is no longer used. Please use sigconf (above) for SIGGRAPH conferences.
 
 %%%% Proceedings format for SIGPLAN conferences 
@@ -29,6 +29,10 @@
 \usepackage{multicol}
 \usepackage{multirow}
 \usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{rotating}
+\usepackage[roman]{parnotes}
+\usepackage[many]{tcolorbox}
 
 \setlength\belowcaptionskip{3pt}
 \setlength\abovecaptionskip{3pt}
@@ -36,6 +40,21 @@
 \setlength\textfloatsep{3pt plus 1pt minus 1pt}
 \setlength\dblfloatsep{3pt plus 1pt minus 1pt}
 \setlength\dbltextfloatsep{3pt plus 1pt minus 1pt}
+
+\newcolumntype{L}{>{\hsize=.8\hsize\raggedright\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcommand\setrow[1]{\gdef\rowmac{#1}#1\ignorespaces}
+\newcommand\clearrow{\global\let\rowmac\relax}
+\clearrow
+
+% This will go in the next version of parnotes.sty
+\makeatletter
+\def\parnoteclear{%
+    \gdef\PN@text{}%
+    \parnotereset
+}
+\makeatother
 
 % DOI
 \acmDOI{10.475/123_4}
@@ -62,11 +81,11 @@
 \draftfalse
 
 \newcommand{\boldification}[1]{\ifdraft\indent\textbf{#1}\\\indent\else\relax\fi}
-
+\newcommand\todo[1]{{\noindent\color{red}\\\textbf{TODO:~}#1\\}}
 
 
 \begin{document}
-\title{Context in Programming: An investigation of how developers create context}
+\title{Context in Programming: An investigation of How Developers Create Context}
 % \titlenote{Produces the permission block, and copyright information}
 % \subtitle{Extended Abstract}
 % \subtitlenote{The full version of the author's guide is available as
@@ -160,32 +179,32 @@ To understand how people create context we observed six programmers engaged in e
 % http://dl.acm.org/ccs.cfm
 % Please copy and paste the code instead of the example below. 
 %
-\begin{CCSXML}
-<ccs2012>
-<concept>
-<concept_id>10003120.10003121.10003126</concept_id>
-<concept_desc>Human-centered computing~HCI theory, concepts and models</concept_desc>
-<concept_significance>300</concept_significance>
-</concept>
-<concept>
-<concept_id>10003120.10003121.10011748</concept_id>
-<concept_desc>Human-centered computing~Empirical studies in HCI</concept_desc>
-<concept_significance>300</concept_significance>
-</concept>
-<concept>
-<concept_id>10003120.10003130.10003131</concept_id>
-<concept_desc>Human-centered computing~Collaborative and social computing theory, concepts and paradigms</concept_desc>
-<concept_significance>300</concept_significance>
-</concept>
-</ccs2012>
-\end{CCSXML}
+% \begin{CCSXML}
+% <ccs2012>
+% <concept>
+% <concept_id>10003120.10003121.10003126</concept_id>
+% <concept_desc>Human-centered computing~HCI theory, concepts and models</concept_desc>
+% <concept_significance>300</concept_significance>
+% </concept>
+% <concept>
+% <concept_id>10003120.10003121.10011748</concept_id>
+% <concept_desc>Human-centered computing~Empirical studies in HCI</concept_desc>
+% <concept_significance>300</concept_significance>
+% </concept>
+% <concept>
+% <concept_id>10003120.10003130.10003131</concept_id>
+% <concept_desc>Human-centered computing~Collaborative and social computing theory, concepts and paradigms</concept_desc>
+% <concept_significance>300</concept_significance>
+% </concept>
+% </ccs2012>
+% \end{CCSXML}
 
-\ccsdesc[300]{Human-centered computing~HCI theory, concepts and models}
-\ccsdesc[300]{Human-centered computing~Empirical studies in HCI}
-\ccsdesc[300]{Human-centered computing~Collaborative and social computing theory, concepts and paradigms}
+% \ccsdesc[300]{Human-centered computing~HCI theory, concepts and models}
+% \ccsdesc[300]{Human-centered computing~Empirical studies in HCI}
+% \ccsdesc[300]{Human-centered computing~Collaborative and social computing theory, concepts and paradigms}
 
 
-\keywords{Context definitions, Psychology of programming, Qualitative Analysis}
+\keywords{Programming context, programming behavior}
 
 
 \maketitle

@@ -1,41 +1,65 @@
 %!TEX root = ../main.tex
 
-\begin{table}[hbt]
-\caption{Programming activities and the most frequently accessed artifacts associated with them}
+\begin{table*}[!htbp]
+\caption{Programmer Activities Codeset}
 \label{tab:programming-activities}
-\begin{tabular}{p{1in}lp{0.7in}}
+\centering
+\begin{tabularx}{0.92\textwidth}{>{\rowmac}c | >{\rowmac}l | L}
 \toprule
-Programming Activity & Artifact type [frequency] & Artifact instance \\
+	Code & Programming Activity & Activity Description \\
 \midrule
-\multirow{3}{1in}{A0 - Coding} & Code [32] & [2,6,5,4,12,2,1] \\
-& Tools [12] & [1,1,5,1,3,1] \\
-& Documents [2] & [2] \\
-\midrule
-\multirow{2}{1in}{A1 - Interaction with documents} & Documents [19] & [19] \\
-& External Artifacts [20] & [13,7] \\
-\midrule
-\multirow{2}{*}{A2 - Navigation} & Code [9] & [0,1,1,0,5,1,1] \\
-& Tool [1] & [0,0,1,0,0,0] \\
-\midrule
-\multirow{2}{1in}{A4 - Reading Task Prompt} & Documents [22] & [22] \\
-& External Artifacts [15] & [10,5] \\
-\midrule
-\multirow{2}{1in}{A5 - Searching in web/IDE} & Code [4] & [0,0,1,1,2,0,0] \\
-& Tool [1] & [0,0,1,0,0,0] \\
-\midrule
-\multirow{2}{1in}{A6 - Reading Search Results} & Code [1] & [0,0,0,0,1,0,0] \\
-& Web Resource & [1] \\
-\midrule
-\multirow{2}{1in}{A7 - Processing Search Results} & Code [2] & [0,0,0,0,2,0,0] \\
-& Web Resource & [1] \\
-\midrule
-\multirow{2}{1in}{A8 - Viewing Web Resource} & Code [1] & [0,0,0,0,1,0,0] \\
-& Web Resource & [1] \\
-\midrule
-A9 - Debugging & Code [1] & [0,0,0,0,1,0,0] \\
-\midrule
-\multirow{2}{*}{A11 - Idle} & Documents [2] & [2] \\
-& External Artifacts & [1,1] \\
+	A0 & CODING & The subject interacts with source code in the editor. \\
+	A1 & UPDATING DOCUMENTS & The subject altered, or updated, the task prompt document. \\
+	A2 & NAVIGATION & The subject navigates to find the file or pages they need. \\
+	A3 & READING TASK PROMPT & The subject read and inspected the task prompt document. \\
+	A4 & SEARCHING & The subject uses search to locate resources to support his problem solving. \\
+	A5 & READING SEARCH RESULTS & The subject reads the search results to decide which results to click. \\
+	A6 & PROCESSING SEARCH RESULTS & The subject decides how to deal with the search results. \\
+	A7 & VIEWING WEB RESOURCES & The subject views online programming support resources. \\
+	A8 & DEBUGGING & The subjects tries to fix the problem in the code. \\
+    A9 & RUN (incl. test running) & The subject uses tools to run the program and view the results. \\
+    A10 & IDLE & The subject does nothing for a specific period ($\geq\!3$ \textit{seconds}) \\
 \bottomrule
-\end{tabular}
-\end{table}
+\end{tabularx}
+%\vspace*{-0.1\baselineskip}
+\end{table*}
+
+% \begin{table}[hbt]
+% \caption{P4's Programming activities and the most frequently accessed artifacts associated with them}
+% \label{tab:programming-activities}
+% \begin{tabular}{p{1in}lp{0.7in}}
+% \toprule
+% Programming Activity & Artifact type [frequency] & Artifact instance \\
+% \midrule
+% \multirow{3}{1in}{A0 - Coding} & Code [c1-c7:32]  & [2,6,5,4,12,2,1] \\
+% & Tools [t1-t6:12] & [1,1,5,1,3,1] \\
+% & Documents [d1:2] & [2] \\
+% \midrule
+% \multirow{2}{1in}{A1 - Interaction with documents} & Documents [19] & [19] \\
+% & External Artifacts [ex1,2:20] & [13,7] \\
+% \midrule
+% \multirow{2}{*}{A2 - Navigation} & Code [9] & [0,1,1,0,5,1,1] \\
+% & Tool [1] & [0,0,1,0,0,0] \\
+% \midrule
+% \multirow{2}{1in}{A4 - Reading Task Prompt} & Documents [22] & [22] \\
+% & External Artifacts [15] & [10,5] \\
+% \midrule
+% \multirow{2}{1in}{A5 - Searching in web/IDE} & Code [4] & [0,0,1,1,2,0,0] \\
+% & Tool [1] & [0,0,1,0,0,0] \\
+% \midrule
+% \multirow{2}{1in}{A6 - Reading Search Results} & Code [1] & [0,0,0,0,1,0,0] \\
+% & Web Resource & [1] \\
+% \midrule
+% \multirow{2}{1in}{A7 - Processing Search Results} & Code [2] & [0,0,0,0,2,0,0] \\
+% & Web Resource & [1] \\
+% \midrule
+% \multirow{2}{1in}{A8 - Viewing Web Resource} & Code [1] & [0,0,0,0,1,0,0] \\
+% & Web Resource & [1] \\
+% \midrule
+% A9 - Debugging & Code [1] & [0,0,0,0,1,0,0] \\
+% \midrule
+% \multirow{2}{*}{A11 - Idle} & Documents [2] & [2] \\
+% & External Artifacts & [1,1] \\
+% \bottomrule
+% \end{tabular}
+% \end{table}

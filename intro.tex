@@ -14,9 +14,30 @@
 
 \boldification{However, although more intuitively accurate, this is more difficult to operationalize. In this paper we want to explore how observing interactions of a programmer with artifacts within and outside the IDE and the process of solving a programming task can help us gain insight about how context is created and evolved}
 
-Within software engineering, the term context has been used implicitly and explicitly to describe the perspective gained from all relevant information. Although we intuitively understand the notion of context, refining that into an operational framework has proved elusive. And due to this difficulty in defining context, two schools of thought have emerged -- representational context and interactional context.
+Programming does not occur in isolation. It involves the programmer ideating and exploring different solutions and using different types of information---some from the code base, others from on line or external resources---to complete the task at hand. These relevant yet separate pieces of information along with the programmer's prior knowledge creates a context that the programmer uses to solve the task.  
 
-The representational view of context adheres to notion that context is tangible, delineable, and stable~\cite{Dourish:2004,Schilit:1994a,Abowd:1999,Pascoe:1998}. Operationalizing this view, researchers have described context as being encoded by artifacts, tasks, and environmental factors. However, these models fail to answer the question: ``what is context?'' Can context be defined as the sum of all of its parts? Or is there other elements that add to context, but are not contained within it?
-The interactional view defines context as a relational property that holds between objects or activities. This view holds that activities are not disjoint from the context, but instead allow context to arise from activities~\cite{Dourish:2004}. Because of this intertwined relationship, contextual factors must be defined dynamically for each activity, and the sequence in which they occur becomes important to the definition~\cite{Viriyakattiyaporn:2010}.
 
-Although the interactional view of context appears to intuitively be a more accurate definition, the elements included in the definition are difficult to measure and operationalize. In this paper, we explore whether observing the interactions that occur when a programmer solves a programming task can provide insights into how context is created and evolved. 
+%These varied pieces of information and solutions that the programmer explored to complete the task along with the knowledge that she already possessed creates the context for solving the programming task. ------- re-framed above---------
+
+%Modeling this programming context is difficult as it not only involves the artifacts that were used, but also the specific information value of these artifacts, the  programming activity that guided the interaction with the artifact, and the mental mapping between the information found and the problem at hand. ---Moved to discussion---
+
+In software engineering, `context' has been described as the perspective gained from all relevant information obtained from these different sources. Although we intuitively understand context; it is a ``slippery notion''~\cite{Dourish:2004}---hard to formally describe and define. It is dynamic in nature, morphing with every action and the evolving goal of the individual. 
+
+%One of the problems is that it is a concept that stays in the periphery while a developer completes a task, but slips away when someone attempts to precisely define it. The second problem is that context is continually renegotiated and redefined based on the current course of action and task goals. ------ re-framed----
+Context has been researched in both software engineering and ubiquitous computing, which, as per Dourish~\cite{Dourish:2004}, has resulted in two disparate views of context---representational and interactional context, respectively.
+% Over the years, research in ubiquitous computing has influenced the concept of `context' in software engineering. Paul Dourish recalls that this has resulted in two disparate views of context---representational and interactional context~\cite{Dourish:2004}.
+
+The \textit{representational view} describes context as delineable and stable~\cite{Schilit:1994a,Abowd:1999,Pascoe:1998}. To operationalize this view, researchers have attempted to encode context through artifacts, tasks, and environmental factors. For example, Gasparic et. al.~\cite{Gasparic:2017} discuss how context can be modeled by environmental factors like who is working, what is the environment, which artifacts are involved etc.
+However, focusing only on how context is represented leaves gaps in our understanding of how context is created, how it is affected by developers' goals, and how it changes with evolving goals. 
+% However, focus on representing context through factors still leaves the burning question `what is context?' Can context be defined as the sum of all these factors? Are there other elements that add to the context? Which of these factors are contained within the context? Which are the factors that only affect the context?
+
+The \textit{interactional view} defines context as a relational property that exists between objects or activities; and one cannot be viewed disjointed from the other ~\cite{Dourish:2004}. Because of this interconnected relationship, contextual factors must be defined dynamically for each activity, and the sequence in which they occur is important to the definition~\cite{Viriyakattiyaporn:2010}.
+
+In this paper, we aim to understand how programmers create context: what role programming activities plays in creating context and how it guides interactions with the artifacts and the environment. We observed six programmers engaged in exploratory programming and (qualitatively) analyzed their programming behavior and interactions with artifacts.
+
+
+We observed that interactions with the artifacts and the programming activity together guide programmers to find and obtain the information that shapes context. <<Add after results finalized>>
+% Information, depends on interaction, can be represented activities and artifacts and the interaction between them.
+% Our observations also indicate that context has representational factors, is defined by ???
+
+% interactional processes, and is informational by nature. This warrants further studies to accurately model the context creation behavior of programmers.
