@@ -41,6 +41,10 @@
 \setlength\dblfloatsep{3pt plus 1pt minus 1pt}
 \setlength\dbltextfloatsep{3pt plus 1pt minus 1pt}
 
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
 \newcolumntype{L}{>{\hsize=.8\hsize\raggedright\arraybackslash}X}
 \newcolumntype{R}{>{\raggedleft\arraybackslash}X}
 \newcolumntype{C}{>{\centering\arraybackslash}X}
@@ -85,7 +89,7 @@
 
 
 \begin{document}
-\title{Context in Programming: An investigation of How Developers Create Context}
+\title{Context in Programming: An Investigation of How Developers Create Context}
 % \titlenote{Produces the permission block, and copyright information}
 
 \author{Souti Chattopadhyay}
@@ -160,7 +164,7 @@ To understand how people create context we observed six programmers engaged in e
 
 \keywords{Programming context, programming behavior}
 
-
+\settopmatter{printfolios=true}
 \maketitle
 
 \input{intro}

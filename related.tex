@@ -3,7 +3,7 @@
 \section{Related Work}
 
 \boldification{Context is an foundational concept borrowed from Ubiquitous Computing. Many such research capture context along with information to for retrieval purposes [\cite{Freeman:1996}(Freeman and Gelernter 1996), \cite{Dourish:2000}Dourish2000] or to influence system behavior based on usage patterns[\cite{Cheverst:2000}(Cheverst et al. 2000)]	}
-Context within computing is a foundational concept borrowed from the ubiquitous computing domain. Authors such as Schilit and Theimer~\cite{Schilit:1994b}, and Brown~\cite{Brown:1995} defined context in the ``context-aware'' computing domain as being various factors of a user; such as location, time, and identity. 
+Context within computing is an intuitive concept, which ``matters a great deal''~\cite{Abowd:1999} but is very hard to define due to its highly dynamic nature. Authors such as Schilit and Theimer~\cite{Schilit:1994b} defined context in the ``context-aware'' computing domain as being various factors of a user; such as location, time, and identity. 
 
 %This definition provided sufficient detail for modeling the user in the ``context-aware'' computing domain, but absolved the notion of environment as a secondary element of the user-driven factors of context.
 
@@ -15,24 +15,23 @@ Context within computing is a foundational concept borrowed from the ubiquitous 
 
 \boldification{More related to the software engineering field are the definitions provided by [Brown, \cite{Ward:1997}Ward, \cite{Rodden:1998}Rodden] which capture context as factors of the user's environment or application settings}
 
-More closely aligned to the software engineering discipline are the definitions provided by Ward~\cite{Ward:1997}, Brown~\cite{Brown:1995}, and Rodden~\cite{Rodden:1998}, which included not only the characteristics of the user, but also the environment of the application. These definitions tended toward static models of the factors that affect context, and assumed very little interplay between different factors and the larger context.
+More closely aligned to software engineering are the definitions provided by Ward~\cite{Ward:1997}, Brown~\cite{Brown:1995} which included the characteristics of the user, the environment and the application. These definitions are inclined towards static models of the factors that affect context, and assume very little interplay between the factors.
 
 \boldification{Murphy has made extensive contribution to import ``context'' into building better software by trying to capture various factors like programming task(Mylar)\cite{Kersten:2006}, artifacts(Hipikat)\cite{Vcubranic:2003} and the state of the environment(Gasparic)\cite{Gasparic:2017}}
 
-Murphy has made extensive contributions to furthering the use of context in building software by capturing various factors that directly or indirectly contribute to the programmers ability to construct meaningful software. These factors have included recording programming tasks~\cite{Kersten:2006}, artifacts~\cite{Vcubranic:2003}, and the state of the development environment~\cite{Gasparic:2017}.
+Models like Mylar~\cite{Kersten:2006} and Hipikat~\cite{Vcubranic:2003} has furthered the possibility to use context in building software. By capturing various factors like---the nature of programming tasks, artifacts, and the development environment---these models attempt to identify the context that directly or indirectly contributes to the programmers ability to construct meaningful software. 
 
 \boldification{Such representational understanding of context is accurate for software systems, as softwares are inherently built to represent states. However, they only answer ?what can be used to represent context?? rather than ''what is context?''}
 
-The representational perspective of context is accurate for modeling software systems, such as in the ``context-aware'' computing domain, where the state of the program is the primary focus. However, these models can only answer ``what can be used to represent context?'' rather than extending towards ``what is context?''
+This kind of \textit{representational} perspective of context is accurate for modeling software systems, such as in the ``context-aware'' computing domain, where the state of the program is the primary focus. However, these models can only answer ``what can be used to represent context?'' rather than extending towards ``what is context?''
 
 \boldification{[Pascoe]\cite{Pascoe:1998} defines context as subset of physical and conceptual state of user. [Dey]\cite{Abowd:1999} takes the notion forward by introducing user?s emotion, attention and informational state as part of context. He points out that context can be seen as an interactional instead of representational}
 
-Jason Pascoe~\citep{Pascoe:1998} defines context as a subset of the physical and conceptual states of the user, which is further expanded by Abowd et al.~\cite{Abowd:1999} to include the user's emotions, attention, and informational state. These perspective markedly differ from the representational perspectives with a focus on the interactional nature of context.
+The perspective provided by authors like Jason Pascoe~\citep{Pascoe:1998} and Abowd et al.~\cite{Abowd:1999} markedly differ from the representational perspectives with a focus on the \textit{interactional} nature of context---where context is a subset of the physical and conceptual states of the user, including the user's emotions, attention, and informational state.
 
 \boldification{This view of context is hard to operationalize. Although Spyglass [Murphy and V\_porn]\cite{Viriyakattiyaporn:2010} subscribed to this notion of context to implement an intuitive recommender, a model of context that accounts for interactions is missing}
 
-However, this interactional context is difficult to operationalize due to the transitory and internal aspects inherent in user-focused models. Although Spyglass~\cite{Viriyakattiyaporn:2010} was developed based upon a user-centric context in order to create an intuitive recommendation system, a model that accounts for the interactions of such a system is still missing.
+However, \textit{interactional} context is difficult to operationalize due to the transitory nature and focus on users. Although Spyglass~\cite{Viriyakattiyaporn:2010} was developed based upon this view of context in order to create an intuitive recommendation system, a model that accounts for the interactions is still missing.
 
-\boldification{In this paper we take a look at if visualizing what developers do throws any light as to how programmers actually build context. Without prescribing to any particular view of context, we explore what processes shape the programmer?s perceived context}
+%\boldification{In this paper we take a look at if visualizing what developers do throws any light as to how programmers actually build context. Without prescribing to any particular view of context, we explore what processes shape the programmer?s perceived context}
 
-In this paper we attempt to examine whether visualizing the processes that cause programmers to build and work with context are measurable, and whether such an examination can provide further insight into the meaning of context in programming. 
